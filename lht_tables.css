@@ -39,7 +39,24 @@
         line-height: 2em;
     }
 
+    td {
+        border: 1px dotted gray;
+        color: rgb(11, 12, 145);
+        position: relative;
+        padding-left: 40%;
+        min-height: 40px;
+    }
 
+    tr:nth-last-of-type(odd) {
+        background-color: rgb(255, 235, 178);
+        border: 2px solid gray;
+    }
+
+    td[data-date='Feb'] {
+        position: absolute;
+        width: 40%;
+        padding: 5px;
+    }
 
 
     td::before {
@@ -58,3 +75,12 @@
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+@media only screen and (min-width: 641px) {
+    table {
+        background-image: url(lht_photo1.png);
+        background-repeat: no-repeat;
+        border: 6px double rgb(154, 64, 3);
+        border-collapse: collapse;
+        margin: 20px auto 20px auto;
+    }
+}
