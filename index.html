@@ -29,7 +29,7 @@
         <img src="lht_logo.png" alt="The Lyman Hall Theater" id="logoimg" />
         <nav> <a id="navicon" href="#"><img src="lht_navicon.png" alt="" /></a>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Box Office</a></li>
                 <li><a href="#">Facilities</a></li>
@@ -73,14 +73,18 @@
         </p>
     </article>
 
+    <!-- This is the web table displaying the calendar with the schedule of events for each day, starting at January 28th and ending at March 3rd.  -->
     <table id="calendar">
+        <!-- This is the table caption displayed at the top of the table. -->
         <caption>February 2018 Calendar</caption>
 
+        <!-- These are the two columns for weekdays and weekends, with the weekdays column spanning 5 columns and the weekends column spanning 2 columns. -->
         <colgroup>
             <col class="weekdays" span="5">
             <col class="weekends" span="2">
         </colgroup>
 
+        <!-- This is the table header containing the 3 letter abreviations for each day of the week displayed at the top of the table. -->
         <thead>
             <tr>
                 <th>Sun</th>
@@ -93,6 +97,7 @@
             </tr>
         </thead>
 
+        <!-- This is the table body, which contains each day in the month of February as well as the last 4 days of January and the first 3 days of March. For each day that there is an event, the information is listed in a description list nested in that data cell. -->
         <tbody>
             <tr>
                 <td data-date="Sun, Jan 28, 2018">
@@ -321,6 +326,7 @@
             </tr>
         </tbody>
     </table>
+    <!-- End of web table -->
 
     <footer>
         <nav>

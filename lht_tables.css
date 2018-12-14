@@ -17,8 +17,11 @@
    Mobile Styles: 0px to 640px 
    ===============================
 */
+
+/* This is a media query for devices with screen withs no greater than 460 pixels. */
 @media only screen and (max-width: 460px) {
 
+    /* This style displays table elements, table body elements, table rows, data cells, heading cells, and caption elements all as block. */
     table,
     tbody,
     tr,
@@ -28,10 +31,12 @@
         display: block;
     }
 
+    /* This style hides all h1 heading elements nested within the table header row group from mobile devices. */
     thead h1 {
         display: none;
     }
 
+    /* This style affects the table caption to set the text color to white, set the background color to gray, and set the font size to 1.5em with a line height of 2em. */
     table caption {
         color: white;
         background-color: gray;
@@ -39,6 +44,7 @@
         line-height: 2em;
     }
 
+    /* This style gives table data cells a gray border, a blue-ish text color, relative positioning, 40% left padding, and a minimum height of 40 pixels. */
     td {
         border: 1px dotted gray;
         color: rgb(11, 12, 145);
@@ -47,17 +53,18 @@
         min-height: 40px;
     }
 
-    tr:nth-last-of-type(odd) {
-        background-color: rgb(255, 235, 178);
-        border: 2px solid gray;
-    }
-
+    /* This style affects data cells with a data-date attribute including "Feb" to give them absolute positioning, a width of 40%, and 5 pixel padding. */
     td[data-date='Feb'] {
         position: absolute;
         width: 40%;
         padding: 5px;
     }
 
+    /* This style gives every odd table row */
+    tr:nth-last-of-type(odd) {
+        background-color: rgb(255, 235, 178);
+        border: 2px solid gray;
+    }
 
     td::before {
         content: attr(data-date);
@@ -75,12 +82,53 @@
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+
+/* This is a media query for devices with screen widths no less than 641 pixels. */
 @media only screen and (min-width: 641px) {
     table {
         background-image: url(lht_photo1.png);
+        background-position: bottom right;
+        background-size: 40%;
         background-repeat: no-repeat;
         border: 6px double rgb(154, 64, 3);
         border-collapse: collapse;
         margin: 20px auto 20px auto;
+        table-layout: fixed;
+        width: 85%;
+    }
+
+    th,
+    td {
+        border: 1px solid gray;
+        font-size: .85em;
+        font-weight: normal;
+        padding: 5px;
+        vertical-align: top;
+        width: 14.28%;
+        word-wrap: break-word;
+    }
+
+    td {
+        background-color: rgba(171, 171, 171, .6);
+        color: rgb(11, 12, 145);
+    }
+
+    td[data-date*='Feb'] {
+        background-color: rgba(232, 214, 148, .6);
+        box-shadow: inset gray 0 0px 20px;
+    }
+
+    caption {
+        vertical-align: top;
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 1.2em;
+        letter-spacing: 3px;
+    }
+
+    /* This style sets the background color and text color for header cells nested within the table header row group. */
+    thead th {
+        background-color: rgb(154, 64, 3);
+        color: white;
     }
 }
