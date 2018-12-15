@@ -16,6 +16,7 @@
 
 
 /* Column Styles */
+/* This style affects the article element to set the column gap to 20 pixels with a column width of 260 pixels, to set a 1 pixel solid column rule, and to set the widows and orphans to 2. */
 article {
     -moz-column-gap: 20px;
     -webkit-column-gap: 20px;
@@ -31,6 +32,7 @@ article {
     orphans: 2;
 }
 
+/* This style affects h1 heading nested within the article to set the column span to all. */
 article h1 {
     -moz-column-span: all;
     -webkit-column-span: all;
